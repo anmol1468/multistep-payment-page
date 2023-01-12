@@ -1,0 +1,17 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  
+  .step {
+    display: flex;
+    align-items: center;
+
+    &__number {
+      margin-right: 1.5rem;
+    }
+
+    &__name {
+      line-height: 5px;
+    }
+  }
+}

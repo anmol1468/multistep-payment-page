@@ -1,12 +1,14 @@
-
-import Addionals from '../features/components/additional/Addionals';
-import Plan from '../features/components/plans/Plan';
+import Payment from '../features/pages/paymentPage/Payment';
 import './App.css';
+import store from './store';
 
 function App() {
+
+  console.log(store.getState())
+
   return (
-    <div className="App">
-      <Addionals />
+    <div className="App" store= {store}>
+      <Payment></Payment>
     </div>
   );
 }

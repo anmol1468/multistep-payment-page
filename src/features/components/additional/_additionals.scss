@@ -2,17 +2,33 @@
 
   .add-on {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 30rem;
     align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+
+    &.selected {
+      border-color: #483EFF;
+    }
+
 
     &__tick {
       padding: 0.2rem 0.5rem 0.3rem 0.5rem;
       border-radius: 15%;
       scale: 110%;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
       
       &.selected {
-        background-color: rgb(167, 77, 167);
+        background-color: #483EFF;
       }
+    }
+
+    &__price {
+      color: #483EFF;
     }
   }
 }
