@@ -1,15 +1,24 @@
 import Payment from '../features/pages/paymentPage/Payment';
 import './App.css';
 import store from './store';
+import { Provider } from 'react-redux';
+import { useEffect } from 'react';
 
 function App() {
 
-  console.log(store.getState())
-
+  // useEffect(() => {
+    
+  //   setInterval(() => {
+      console.log(store.getState())
+  //   }, 5000);
+  // },[])
+  
   return (
-    <div className="App" store= {store}>
+    <Provider store={store}>
+    <div className="App">
       <Payment></Payment>
     </div>
+    </Provider>
   );
 }
 

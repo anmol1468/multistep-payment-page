@@ -4,11 +4,17 @@
     display: flex;
     justify-content: center;
 
-    > div {
-      padding: 2rem 4rem;
-      margin: 3rem 2rem;
+    .option {
+      padding: 2rem 3rem;
+      margin: 3rem 1rem;
       border-radius: 5%;
+      text-align: left;
       border: 2px solid rgb(0, 0, 0, 0.1);
+
+      &.selected {
+        border-color: #483EFF;
+        background-color: #F8F9FF;
+      }
     }
   }
 
