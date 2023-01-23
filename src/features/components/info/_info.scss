@@ -1,0 +1,27 @@
+.info {
+  text-align: left;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+> p {
+    color: #9699AA;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
+
+  h4 {
+    color: #011d3e;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: -0.5rem;
+    border: 0.5px solid rgba(2, 41, 89, 0.3);
+
+  }
+}

@@ -1,0 +1,17 @@
+.currentDisplay {
+  width: 50%;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    .next-button {
+        background-color: #022959;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        border-radius: 12%;
+        letter-spacing: 1px
+      }
+  }
+}

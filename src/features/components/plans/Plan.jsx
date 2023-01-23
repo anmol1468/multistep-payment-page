@@ -6,17 +6,46 @@ import '../../../index.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeFrequency, changeType } from './planSlice'
 
+
+const plansData = [
+  {
+    name: 'Arcade',
+    monthly: 9,
+    yearly: 90,
+    logo: Arcade
+  },
+  {
+    name: 'Advanced',
+    monthly: 12,
+    yearly: 120,
+    logo: Advanced
+  },
+  {
+    name: 'Pro',
+    monthly: 15,
+    yearly: 150,
+    logo: Pro
+  }
+]
+
 function Plan() {
 
   const dispatch = useDispatch();
-  const plan = useSelector(state => state.plan)
+  const planSelected = useSelector(state => state.plan)
 
   const toggleFrequency = () => {
+    dispatch(changeType( {
+      name: '',
+      rate: undefined
+    }))
     return dispatch(changeFrequency())
   }
 
-  const selectOption = (e) => {
-    e.classList('selected')
+  const selectOption = (plan) => {
+    dispatch(changeType( {
+      name: plan.name,
+      rate: planSelected.frequency==='monthly' ? plan.monthly: plan.yearly
+    }))
   }
 
   return (
@@ -24,30 +53,22 @@ function Plan() {
       <h2>Select you plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
       <form action="">
+
         <div className="plan__type">
-          <div className='option selected' onClick={(e) => {
-            selectOption(e)
+          
+        {
+          plansData.map((plan) => {
+            return <div className={`option ${plan.name===planSelected.type.name? 'selected': ''}`} onClick={() => {
+            selectOption(plan)
           }}>
-            <img src={Arcade} alt="arcade-logo" />
-            <h3>Arcade</h3>
-            {plan.frequency==='monthly' ?<p>$9/mo</p>: <div><p>$90/yr</p><p>2 months free</p></div> }
+            <img src={plan.logo} alt="advanced-logo" />
+            <h3>{plan.name}</h3>
+          {planSelected.frequency==='monthly' ?<p>{`$${plan.monthly}/mo`}</p>: <div><p>{`$${plan.yearly}/yr`}</p><p>2 months free</p></div> }
           </div>
-          <div className='option' onClick={(e) => {
-            selectOption(e)
-          }}>
-            <img src={Advanced} alt="advanced-logo" />
-            <h3>Advanced</h3>
-            {plan.frequency==='monthly' ?<p>$12/mo</p>: <div><p>$120/yr</p><p>2 months free</p></div> }
-          </div>
-          <div className='option' onClick={(e) => {
-            console.log(e.target)
-            selectOption(e.target)
-          }}>
-            <img src={Pro} alt="pro-logo" />
-            <h3>Pro</h3>
-            {plan.frequency==='monthly' ?<p>$15/mo</p>: <div><p>$150/yr</p><p>2 months free</p></div> }
-          </div>
+          })
+        }
         </div>
+
         <div className="plan__frequency">
           <p>Monthly</p>
           <input type="checkbox" id="switch" /><label for="switch" onClick={toggleFrequency}>Toggle</label>

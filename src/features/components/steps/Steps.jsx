@@ -1,36 +1,43 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
+const steps = [
+  {
+    number: 1,
+    description: 'YOUR INFO'
+  },
+  {
+    number: 2,
+    description: 'SELECT PLAN'
+  },
+  {
+    number: 3,
+    description: 'ADD-ONS'
+  },
+  {
+    number: 4,
+    description: 'SUMMARY'
+  },
+]
 
 function Steps() {
+
+  const currentDisplay = useSelector(state => state.currentDisplay.currentNum + 1);
+
   return (
     <div className='steps'>
-      <div className="step">
-        <div className="step__number">1</div>
+
+      {steps.map((step) => {
+        return <div className="step" key={step.number}>
+        <div className={`step__number ${step.number === currentDisplay? 'selected': ''}`}>{step.number}</div>
         <div className="step__name">
-          <p>STEP 1</p>
-          <h4>YOUR INFO</h4>
+          <p>STEP {step.number}</p>
+          <h4>{step.description}</h4>
         </div>
       </div>
-      <div className="step">
-        <div className="step__number">2</div>
-        <div className="step__name">
-          <p>STEP 2</p>
-          <h4>SELECT PLAN</h4>
-        </div>
-      </div>
-      <div className="step">
-        <div className="step__number">3</div>
-        <div className="step__name">
-          <p>STEP 3</p>
-          <h4>ADD-ONS</h4>
-        </div>
-      </div>
-      <div className="step">
-        <div className="step__number">4</div>
-        <div className="step__name">
-          <p>STEP 4</p>
-          <h4>SUMMARY</h4>
-        </div>
-      </div>
+      })}
+
+      
     </div>
   )
 }

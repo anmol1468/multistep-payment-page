@@ -13,8 +13,11 @@ code {
 }
 
 
+
 @import './features/components/plans/plan';
 @import './features/components/additional/additionals';
 @import './features/components/summary/summary';
 @import './features/pages/paymentPage/payment';
-@import './features/components/steps/steps'
+@import './features/components/steps/steps';
+@import './features/components/info/info';
+@import './features/components/currentDisplay/currentDisplay';

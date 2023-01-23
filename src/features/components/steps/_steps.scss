@@ -1,6 +1,13 @@
 .steps {
   display: flex;
   flex-direction: column;
+  background-image: url('../../../assets/images/bg-sidebar-desktop.svg');
+  background-color: #483EFF;
+  padding: 2rem 4rem;
+  background-position: bottom;
+  height: 75vh;
+  border-radius: 10%;
+  background-repeat: no-repeat;
   
   .step {
     display: flex;
@@ -8,10 +15,31 @@
 
     &__number {
       margin-right: 1.5rem;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font-weight: 700;
+
+      &.selected {
+        color: #000;
+        background-color: #ABBCFF;
+        border: 2px solid transparent;
+      }
     }
 
     &__name {
-      line-height: 5px;
+      // line-height: 2px;
+
+      p {
+        color: #ABBCFF;
+        margin-bottom: -1.2rem;
+      }
+
+      h4 {
+        color: #fff;
+        font-weight: 700;
+      }
     }
   }
 }

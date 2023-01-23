@@ -13,7 +13,6 @@ function CurrentDisplay() {
 
   const nextHandler = () => {
     dispatch(nextStep())
-    console.log(currentDisplay)
   }
 
   const backHandler = () => {
@@ -24,8 +23,8 @@ function CurrentDisplay() {
     <div className='currentDisplay'>
       {currentDisplay.options[currentDisplay.currentNum]}
       <div className="currentDisplay__buttons">
-        <button onClick={backHandler}>Go back</button>
-        <button onClick={nextHandler}>Next</button>
+        <button class='previous-button' onClick={backHandler}>Go back</button>
+        <button class='next-button' onClick={nextHandler}>Next</button>
       </div>
     </div>
   )
