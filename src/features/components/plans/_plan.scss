@@ -1,18 +1,28 @@
 .plan {
+  margin-left: -3rem;
 
   &__type {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     .option {
       padding: 2rem 3rem 2rem 1rem;
       margin: 3rem 1rem;
       border-radius: 5%;
+      width: 6rem;
       text-align: left;
       border: 2px solid rgb(0, 0, 0, 0.1);
 
+      p {
+        color: grey;
+      }
+
       .free {
         font-size: 0.8rem;
+        margin-top: -0.8rem;
+        margin-bottom: -0.3rem;
+        color: #000;
+        font-weight: 500;
       }
 
       &.selected {
