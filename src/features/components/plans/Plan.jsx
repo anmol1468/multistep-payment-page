@@ -63,7 +63,7 @@ function Plan() {
           }}>
             <img src={plan.logo} alt="advanced-logo" />
             <h3>{plan.name}</h3>
-          {planSelected.frequency==='monthly' ?<p>{`$${plan.monthly}/mo`}</p>: <div><p>{`$${plan.yearly}/yr`}</p><p>2 months free</p></div> }
+          {planSelected.frequency==='monthly' ?<p>{`$${plan.monthly}/mo`}</p>: <div><p>{`$${plan.yearly}/yr`}</p><p className='free'>2 months free</p></div> }
           </div>
           })
         }

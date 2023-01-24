@@ -1,5 +1,9 @@
 .currentDisplay {
   width: 50%;
+  // height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__buttons {
     display: flex;
@@ -13,5 +17,15 @@
         border-radius: 12%;
         letter-spacing: 1px
       }
+
+    .previous-button {
+      background-color: transparent;
+      color: #9699AA;
+      border: none;
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
   }
 }

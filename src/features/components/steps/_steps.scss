@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   background-image: url('../../../assets/images/bg-sidebar-desktop.svg');
-  background-color: #483EFF;
-  padding: 2rem 4rem;
+  // background-color: #483EFF;
+  padding: 1.5rem 4rem 8rem 4rem;
   background-position: bottom;
-  height: 75vh;
+  max-height: 50rem;
+  // height: 75vh;
   border-radius: 10%;
   background-repeat: no-repeat;
   

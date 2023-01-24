@@ -23,7 +23,7 @@ function CurrentDisplay() {
     <div className='currentDisplay'>
       {currentDisplay.options[currentDisplay.currentNum]}
       <div className="currentDisplay__buttons">
-        <button class='previous-button' onClick={backHandler}>Go back</button>
+        <button class={`previous-button ${currentDisplay.currentNum===0? 'hidden': ''}`} onClick={backHandler}>Go back</button>
         <button class='next-button' onClick={nextHandler}>Next</button>
       </div>
     </div>

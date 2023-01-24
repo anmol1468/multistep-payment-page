@@ -5,11 +5,15 @@
     justify-content: center;
 
     .option {
-      padding: 2rem 3rem;
+      padding: 2rem 3rem 2rem 1rem;
       margin: 3rem 1rem;
       border-radius: 5%;
       text-align: left;
       border: 2px solid rgb(0, 0, 0, 0.1);
+
+      .free {
+        font-size: 0.8rem;
+      }
 
       &.selected {
         border-color: #483EFF;
