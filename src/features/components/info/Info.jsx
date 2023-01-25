@@ -15,7 +15,7 @@ function Info() {
       <p>Please provide your name, email address and phone number.</p>
       <form action="">
         <h4>Name</h4>
-        <input type="text" placeholder='e.g. Stephen King' value={info.name} 
+        <input required type="text" placeholder='e.g. Stephen King' value={info.name} 
         onChange={(e) => dispatch(changeName(e.target.value))} />
 
 

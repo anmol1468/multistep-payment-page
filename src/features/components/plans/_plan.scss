@@ -1,17 +1,38 @@
 .plan {
+  text-align: left;
   margin-left: -3rem;
 
+  @include respond(ten) {
+    margin-left: -2rem;
+    padding: 0 1rem;
+  }
+
   &__type {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    @include respond(ten) {
+      flex-direction: column;
+    }
 
     .option {
-      padding: 2rem 3rem 2rem 1rem;
+      padding: 2rem 2.8rem 2rem 1rem;
       margin: 3rem 1rem;
       border-radius: 5%;
       width: 6rem;
       text-align: left;
       border: 2px solid rgb(0, 0, 0, 0.1);
+
+      @include respond(ten) {
+        padding: 0.5rem 2rem;
+        margin: 0.5rem 0;
+        width: 78%;
+        display: flex;
+        justify-content: space-between;
+      }
 
       p {
         color: grey;

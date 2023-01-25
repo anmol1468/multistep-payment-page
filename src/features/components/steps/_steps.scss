@@ -9,6 +9,15 @@
   // height: 75vh;
   border-radius: 10%;
   background-repeat: no-repeat;
+  margin-right: 6rem;
+
+  @include respond(nine) {
+    margin-right: 4rem;
+  }
+
+  @include respond(eight) {
+    margin-right: 2.5rem;
+  }
   
   .step {
     display: flex;

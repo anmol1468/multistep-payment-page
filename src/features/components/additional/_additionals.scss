@@ -1,10 +1,12 @@
 .addionals {
   width: 100%;
+  // margin-left: -2rem;
 
   .add-on {
     display: flex;
     justify-content: space-between;
     width: 30rem;
+    width: 90%;
     align-items: center;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;

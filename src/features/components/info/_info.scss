@@ -24,4 +24,17 @@
     border: 0.5px solid rgba(2, 41, 89, 0.3);
 
   }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+
+    
 }

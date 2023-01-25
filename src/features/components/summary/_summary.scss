@@ -1,9 +1,10 @@
 .summary {
+  text-align: left;
 
   &__details {
     background-color: #F8F9FF;
     margin: auto;
-    width: 30rem;
+    // width: 30rem;
     border-radius: 0.5rem;
     padding: 1rem 2rem;
 
@@ -28,7 +29,7 @@
   &__total {
     display: flex;
     margin: auto;
-    width: 30rem;
+    // width: 30rem;
     align-items: center;
     justify-content: space-between;
 
