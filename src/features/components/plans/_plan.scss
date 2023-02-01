@@ -7,6 +7,18 @@
     padding: 0 1rem;
   }
 
+@include respond(seven) {
+  background-color: #fff;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+  padding: 2rem 3rem 3rem 3rem;
+}
+
+@include respond(five) {
+  padding: 2rem;
+}
+
   &__type {
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
@@ -32,6 +44,11 @@
         width: 78%;
         display: flex;
         justify-content: space-between;
+      }
+
+      @include respond(five) {
+        padding: 0.5rem 1.5rem;
+        margin: 0.5rem auto;
       }
 
       p {

@@ -5,4 +5,12 @@
   align-items: center;
   height: 90vh;
   padding: 0 1rem;
+  overflow-x: hidden;
+
+  @include respond(seven) {
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    height: auto;
+  }
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 import '../../../index.scss'
 import { useDispatch, useSelector } from 'react-redux'
+import { selectStep } from '../currentDisplay/currentDisplaySlice'
 
 function Summary() {
 
-  const plan = useSelector((state) => state.plan)
-  const addOns = useSelector(state => state.addOns.selectedAddOns)
+  const dispatch = useDispatch();
+  const plan = useSelector((state) => state.plan);
+  const addOns = useSelector(state => state.addOns.selectedAddOns);
 
   const getTotal = () => {
     let addOnsTotal = 0;
@@ -26,7 +28,9 @@ function Summary() {
         <div className="main">
           <div>
             <h3>{plan.type.name} ({plan.frequency})</h3>
-            <button>change</button>
+            <button onClick={() => {
+              dispatch(selectStep(1))
+            }}>Change</button>
           </div>
           <div>
             ${plan.type.rate}/{`${plan.frequency==='monthly'? 'mo': 'yr'}`}

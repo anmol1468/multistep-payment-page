@@ -18,6 +18,21 @@
   @include respond(eight) {
     margin-right: 2.5rem;
   }
+
+  @include respond(seven) {
+    flex-direction: row;
+    background-image: url('../../../assets/images/bg-sidebar-mobile.svg');
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 -5rem 0;
+    padding: 5rem 2rem;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    border-radius: 0;
+
+  }
   
   .step {
     display: flex;
@@ -40,6 +55,10 @@
 
     &__name {
       // line-height: 2px;
+
+      @include respond(seven) {
+        display: none;
+      }
 
       p {
         color: #ABBCFF;

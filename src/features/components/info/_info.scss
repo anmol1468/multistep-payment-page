@@ -1,6 +1,14 @@
 .info {
   text-align: left;
 
+  @include respond(seven) {
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem 3rem 3rem 3rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+
   h2 {
     font-size: 2rem;
   }

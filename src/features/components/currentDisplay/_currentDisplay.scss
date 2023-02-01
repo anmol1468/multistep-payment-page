@@ -5,17 +5,38 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @include respond(seven) {
+    width: 75%;
+    height: 80vh;
+  }
+  @include respond(six) {
+    width: 82.5%;
+    height: 80vh;
+  }
+  @include respond(five) {
+    width: 92%;
+  }
+  @include respond(four) {
+    // width: 95%;
+  }
+
   &__buttons {
-    display: flex;
-    justify-content: space-between;
     margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(seven) {
+      background-color: #fff;
+      padding: 0.7rem 3rem;
+      border-radius: 0.9rem;
+    }
 
     .next-button {
         background-color: #022959;
         padding: 0.5rem 1rem;
         color: #fff;
         border-radius: 12%;
-        letter-spacing: 1px
+        letter-spacing: 1px;
       }
 
     .previous-button {
@@ -26,6 +47,15 @@
       &.hidden {
         opacity: 0;
       }
+    }
+
+    .confirm-button {
+      background-color: #928CFF;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 12%;
+      letter-spacing: 1px;
+      border: none;
     }
   }
 }

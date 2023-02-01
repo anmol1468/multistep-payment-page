@@ -70,6 +70,14 @@ code {
 }
 
 
+body {
+
+  @include respond(seven) {
+    background-color: #D6D9E6;
+  }
+}
+
+
 
 @import './features/components/plans/plan';
 @import './features/components/additional/additionals';
@@ -78,3 +86,4 @@ code {
 @import './features/components/steps/steps';
 @import './features/components/info/info';
 @import './features/components/currentDisplay/currentDisplay';
+@import './features/components/confimation/confirmation'

@@ -1,6 +1,13 @@
 .summary {
   text-align: left;
 
+  @include respond(seven) {
+      background-color: #fff;
+      padding: 2rem 3rem 3rem 3rem;
+      margin-top: 2rem;
+      border-radius: 1rem;
+    }
+
   &__details {
     background-color: #F8F9FF;
     margin: auto;
@@ -14,6 +21,19 @@
       align-items: center;
       border-bottom: 1.5px solid #e0e1e6;
       padding-bottom: 1rem;
+
+      button {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 0 0 0.1rem 0;
+        transition: all 0.2s;
+
+        &:hover {
+          color: #483EFF;
+          border-bottom: 1px solid #483EFF;
+        }
+      }
     }
 
     .add-ons {
