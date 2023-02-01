@@ -10,7 +10,11 @@ const store = configureStore({
     currentDisplay: currentDisplaySlice,
     plan: planSlice,
     addOns : selectedAddOnsSlice
-  }
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    })
 })
 
 export default store
