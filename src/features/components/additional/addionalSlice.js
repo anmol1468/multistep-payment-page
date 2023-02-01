@@ -11,7 +11,6 @@ const selectedAddOnsSlice = createSlice({
     },
 
     removeAddOn : (state, action) => {
-      console.log(state.selectedAddOns)
       state.selectedAddOns = state.selectedAddOns.filter((addOn) => {
         
         return addOn.name.toLowerCase()!==action.payload.name.toLowerCase()

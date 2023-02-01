@@ -58,7 +58,7 @@ function Plan() {
           
         {
           plansData.map((plan) => {
-            return <div className={`option ${plan.name===planSelected.type.name? 'selected': ''}`} onClick={() => {
+            return <div key={plan.name} className={`option ${plan.name===planSelected.type.name? 'selected': ''}`} onClick={() => {
             selectOption(plan)
           }}>
             <img src={plan.logo} alt="advanced-logo" />
@@ -71,7 +71,7 @@ function Plan() {
 
         <div className="plan__frequency">
           <p>Monthly</p>
-          <input type="checkbox" id="switch" /><label for="switch" onClick={toggleFrequency}>Toggle</label>
+          <input type="checkbox" id="switch" /><label htmlFor="switch" onClick={toggleFrequency}>Toggle</label>
           <p>Yearly</p>
         </div>
       </form>

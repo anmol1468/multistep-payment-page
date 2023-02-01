@@ -50,9 +50,9 @@ function CurrentDisplay() {
       }}
       >
         
-        <div><button class={`previous-button ${currentDisplay.currentNum===0? 'hidden': ''}`} onClick={backHandler}>Go back</button></div>
+        <div><button className={`previous-button ${currentDisplay.currentNum===0? 'hidden': ''}`} onClick={backHandler}>Go back</button></div>
 
-        <div><button class='next-button' onClick={nextHandler}
+        <div><button className='next-button' onClick={nextHandler}
         style={{
           display: currentDisplay.currentNum===3? 'none': 'initial'
         }}

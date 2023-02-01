@@ -39,7 +39,7 @@ function Summary() {
         <div className="add-ons">
 
         {addOns.map(addOn => {
-          return <div>
+          return <div key={addOn.name}>
             <p>{addOn.name}</p>
             <h5>+{plan.frequency==='monthly'? `${addOn.monthly}/mo`: `${addOn.yearly}/yr`}</h5>
           </div>
